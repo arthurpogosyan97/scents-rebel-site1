@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Аромасвечи | Магазин авторских свечей</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=contact-widgets" />
+  </head>
+  <body>
+    <header class="site-header reveal-on-scroll">
+      <a class="brand" href="#home" aria-label="Аромасвечи">
+        <span class="brand-mark"></span>
+        <span>SCENTS REBEL</span>
+      </a>
+      <nav class="nav-links" aria-label="Основная навигация">
+        <a href="#catalog">Каталог</a>
+        <a href="#sets">Наборы</a>
+        <a href="#delivery">Доставка</a>
+        <a href="#studio">Студия</a>
+      </nav>
+      <button class="cart-button" type="button" data-open-cart aria-label="Открыть корзину">
+        <span class="cart-icon" aria-hidden="true">+</span>
+        <span class="cart-label">Корзина</span>
+        <span class="cart-count" data-cart-count>0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero reveal-on-scroll" id="home">
+        <div class="smoke-field" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">ручная заливка · натуральный воск · тихие ритуалы</p>
+          <h1>Аромасвечи для дома, который выдыхает</h1>
+          <p class="hero-text">Соберите настроение вечера: древесные, ягодные, цитрусовые и пряные свечи в керамике и стекле.</p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#catalog">Выбрать аромат</a>
+            <button class="secondary-link" type="button" data-open-builder>Собрать набор</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip reveal-on-scroll" aria-label="Преимущества">
+        <div>
+          <strong>до 35 ч</strong>
+          <span>ровное горение</span>
+        </div>
+        <div>
+          <strong>100%</strong>
+          <span>соевый воск</span>
+        </div>
+        <div>
+          <strong>подарочно</strong>
+          <span>упаковка в каждом заказе</span>
+        </div>
+      </section>
+
+      <section class="catalog-shell reveal-on-scroll" id="catalog">
+        <div class="section-heading">
+          <p class="eyebrow">каталог</p>
+          <h2>Выберите аромат под момент</h2>
+        </div>
+
+        <div class="shop-layout">
+          <aside class="filters" aria-label="Фильтры каталога">
+            <div class="filter-group">
+              <label for="search">Поиск</label>
+              <input id="search" type="search" placeholder="ваниль, лес, цитрус" data-search />
+            </div>
+            <div class="filter-group">
+              <span>Семейство</span>
+              <div class="chips" data-family-filters></div>
+            </div>
+            <div class="filter-group">
+              <span>Настроение</span>
+              <div class="chips" data-mood-filters></div>
+            </div>
+            <div class="filter-group">
+              <label for="price">Цена до <strong data-price-value>4200 ₽</strong></label>
+              <input id="price" type="range" min="1600" max="4200" step="100" value="4200" data-price />
+            </div>
+            <div class="filter-row">
+              <label class="toggle">
+                <input type="checkbox" data-favorites-only />
+                <span>Только избранное</span>
+              </label>
+              <button class="text-button" type="button" data-reset>Сбросить</button>
+            </div>
+          </aside>
+
+          <div class="catalog-area">
+            <div class="catalog-toolbar">
+              <p data-result-count>0 товаров</p>
+              <select data-sort aria-label="Сортировка">
+                <option value="popular">Сначала популярные</option>
+                <option value="price-asc">Цена по возрастанию</option>
+                <option value="price-desc">Цена по убыванию</option>
+              </select>
+            </div>
+            <div class="product-grid" data-products></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="builder reveal-on-scroll" id="sets">
+        <div>
+          <p class="eyebrow">подарочные наборы</p>
+          <h2>Конструктор уютного вечера</h2>
+          <p>Выберите три свечи, а мы добавим хлопковый фитиль-триммер, открытку и плотную коробку с лентой.</p>
+        </div>
+        <div class="builder-panel">
+          <div class="builder-slots" data-builder-slots></div>
+          <div class="builder-total">
+            <span>Набор</span>
+            <strong data-builder-total>0 ₽</strong>
+          </div>
+          <button class="primary-button" type="button" data-add-set>Добавить набор</button>
+        </div>
+      </section>
+
+      <section class="delivery reveal-on-scroll" id="delivery">
+        <div class="delivery-copy">
+          <p class="eyebrow">доставка и оплата</p>
+          <h2>Довезем аромат бережно</h2>
+          <p>Свечи упаковываются в плотную коробку с крафтовым наполнителем, чтобы стекло, керамика и фитиль приехали без сюрпризов.</p>
+        </div>
+        <div class="delivery-grid">
+          <article class="delivery-card">
+            <span class="delivery-icon" aria-hidden="true">1</span>
+            <h3>По городу</h3>
+            <p>Курьером за 1-2 дня. Стоимость 450 ₽, бесплатно при заказе от 7000 ₽.</p>
+          </article>
+          <article class="delivery-card">
+            <span class="delivery-icon" aria-hidden="true">2</span>
+            <h3>По России</h3>
+            <p>СДЭК или Boxberry от 3 дней. Точная стоимость считается после выбора города.</p>
+          </article>
+          <article class="delivery-card">
+            <span class="delivery-icon" aria-hidden="true">3</span>
+            <h3>Самовывоз</h3>
+            <p>Из студии после подтверждения заказа. Мы напишем, когда набор будет готов.</p>
+          </article>
+          <article class="delivery-card">
+            <span class="delivery-icon" aria-hidden="true">4</span>
+            <h3>Оплата</h3>
+            <p>Онлайн, переводом или при получении. Для подарков чек не вкладываем в коробку.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="studio reveal-on-scroll" id="studio">
+        <div class="studio-copy">
+          <p class="eyebrow">студия</p>
+          <h2>Малые партии, точные рецептуры</h2>
+          <p>Каждая свеча проходит тест горения, чтобы аромат раскрывался ровно, а воск не тоннелировал. Банки можно вернуть на повторную заливку со скидкой.</p>
+        </div>
+        <div class="studio-metrics">
+          <div><strong>18</strong><span>ароматов в сезонной карте</span></div>
+          <div><strong>92%</strong><span>растительного воска в смеси</span></div>
+          <div><strong>1:1</strong><span>помощь с подбором подарка</span></div>
+        </div>
+      </section>
+    </main>
+
+    <div class="cart-drawer" data-cart aria-hidden="true">
+      <div class="cart-backdrop" data-close-cart></div>
+      <aside class="cart-panel" aria-label="Корзина">
+        <div class="cart-head">
+          <h2>Корзина</h2>
+          <div class="cart-head-socials" aria-label="Связаться с нами">
+            <a class="social-icon telegram-link" href="https://t.me/scentsrebelbot" target="_blank" rel="noreferrer" aria-label="Telegram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 4.3 18.4 20c-.2 1-.8 1.2-1.6.7l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.6-7.8c.4-.3-.1-.5-.6-.2L6.9 13.9 2.3 12.5c-1-.3-1-1 .2-1.4L20.4 4c.8-.3 1.5.2 1.3.3Z"/></svg>
+            </a>
+            <a class="social-icon whatsapp-link" href="#" data-whatsapp-contact aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2a9.7 9.7 0 0 0-8.4 14.6L2.4 21.8l5.1-1.2A9.7 9.7 0 1 0 12 2.2Zm0 17.6a7.8 7.8 0 0 1-4-1.1l-.3-.2-3 .7.7-2.9-.2-.3A7.8 7.8 0 1 1 12 19.8Zm4.4-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.4 6.4 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.2-.3-.2-.5-.3Z"/></svg>
+            </a>
+          </div>
+          <button class="icon-button" type="button" data-close-cart aria-label="Закрыть корзину">×</button>
+        </div>
+        <div class="cart-items" data-cart-items></div>
+        <div class="promo">
+          <input type="text" placeholder="Промокод" data-promo />
+          <button type="button" data-apply-promo>Применить</button>
+        </div>
+        <p class="promo-note" data-promo-note></p>
+        <div class="cart-summary">
+          <div><span>Товары</span><strong data-subtotal>0 ₽</strong></div>
+          <div><span>Скидка</span><strong data-discount>0 ₽</strong></div>
+          <div><span>Доставка</span><strong data-delivery>0 ₽</strong></div>
+          <div class="total"><span>Итого</span><strong data-total>0 ₽</strong></div>
+        </div>
+        <button class="primary-button checkout-button" type="button" data-checkout>Оформить заказ</button>
+      </aside>
+    </div>
+
+    <dialog class="checkout-modal" data-modal>
+      <form method="dialog" class="checkout-form">
+        <button class="icon-button modal-close" value="cancel" aria-label="Закрыть">×</button>
+        <p class="eyebrow">оформление</p>
+        <h2>Куда отправить свечи?</h2>
+        <label>Имя<input required name="name" type="text" placeholder="Анна" /></label>
+        <label>Телефон<input required name="phone" type="tel" placeholder="+7 900 000-00-00" /></label>
+        <label>Адрес<textarea required name="address" placeholder="Город, улица, дом, квартира"></textarea></label>
+        <button class="primary-button" value="confirm">Подтвердить заказ</button>
+      </form>
+    </dialog>
+
+    <div class="welcome-promo" data-welcome-promo aria-live="polite">
+      <button class="welcome-close" type="button" data-close-promo aria-label="Закрыть промокод">×</button>
+      <span class="promo-spark" aria-hidden="true"></span>
+      <div>
+        <p>Первый заказ</p>
+        <strong>Введите промокод <span>AROMA10</span> и получите скидку 10%</strong>
+      </div>
+      <button type="button" data-use-promo>Применить</button>
+    </div>
+
+    <div class="operator-help" data-operator-help aria-live="polite">
+      <button class="operator-close" type="button" data-close-operator aria-label="Закрыть помощь">×</button>
+      <div class="operator-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3a7 7 0 0 0-7 7v3.2A3 3 0 0 0 8 16h1v-6H7a5 5 0 0 1 10 0h-2v6h1a3 3 0 0 0 3-2.8V10a7 7 0 0 0-7-7Zm-1 15h2v1h-2v-1Zm-1 3h4a2 2 0 0 0 2-2v-1h-2v1h-4v2Z"/></svg>
+      </div>
+      <div>
+        <p>Помощь оператора</p>
+        <strong>Нужна консультация по ароматам?</strong>
+      </div>
+      <div class="operator-actions">
+        <a class="social-link telegram-link" href="https://t.me/scentsrebelbot" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.7 4.3 18.4 20c-.2 1-.8 1.2-1.6.7l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.6-7.8c.4-.3-.1-.5-.6-.2L6.9 13.9 2.3 12.5c-1-.3-1-1 .2-1.4L20.4 4c.8-.3 1.5.2 1.3.3Z"/></svg>
+          Telegram
+        </a>
+        <a class="social-link whatsapp-link" href="#" data-whatsapp-contact>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2a9.7 9.7 0 0 0-8.4 14.6L2.4 21.8l5.1-1.2A9.7 9.7 0 1 0 12 2.2Zm0 17.6a7.8 7.8 0 0 1-4-1.1l-.3-.2-3 .7.7-2.9-.2-.3A7.8 7.8 0 1 1 12 19.8Zm4.4-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.4 6.4 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1-.1-.2-.3-.2-.5-.3Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <button class="scroll-jump" type="button" data-scroll-jump aria-label="Наверх" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      ↑
+    </button>
+
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+    <script src="app.js?v=contact-widgets"></script>
+  </body>
+</html>
